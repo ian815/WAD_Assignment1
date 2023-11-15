@@ -2,6 +2,35 @@
 ## Weather tracker
 This is an node module to provide weather details. There are many functions to get details on the weather such as temperature, rain, UV index and forecast. These are done using open weather map's API. There are also functions to aid you in finding out the latitude/longitude of a location, or find a location name depending on the latitude/longitude with the use of Google Maps API. The documentations for both API's can found below.
 
+# Instructions
+Open terminal and install axios to run the API's.
+```ruby
+npm install axios
+```
+
+Add the module to your file with the following line(Change file path according to where you have the module saved):
+```ruby
+const weather=require("./Ian_WAD.js");
+```
+
+Due to the functions being asynchronous, follow these examples when trying to call the functions. Change the function name and parameters according to which function output you are trying to call.
+
+### Example 1
+```ruby
+weather.getLocationByLatLon(1.290270,103.851959).then(result=>{
+    console.log(result)
+})
+```
+
+### Example 2
+```ruby
+async function getLocation(){
+    const result=await weather.getLocationByLatLon(1.290270,103.851959);
+    console.log(result);
+}
+getLocation();
+```
+
 # Functions
 ## Find location name using Latitude and Longitude (getLocationByLatLon)
 This function will output the name of the location according to the latitude and longitude entered
