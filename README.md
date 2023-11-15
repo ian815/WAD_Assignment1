@@ -10,7 +10,7 @@ npm install axios
 
 Add the module to your file with the following line(Change file path according to where you have the module saved):
 ```ruby
-const weather=require("./Ian_WAD.js");
+const weather=require("./Ian_WeatherModule.js");
 ```
 
 Due to the functions being asynchronous, follow these examples when trying to call the functions. Change the function name and parameters according to which function output you are trying to call.
