@@ -46,14 +46,13 @@ module.exports = {
             const tempKelvin="\nTemperature(kelvin): "+response.data.main.temp;
             const tempCelsius="\nTemperature(celsius): "+celsius;
             const weather="\nWeather: "+response.data.weather[0].description;
-            const rain="\n==================================================";
+            var rain="\n==================================================";
             if(response.data.rain=='undefined'||"[object Object]"){
             }
             else{
-                const rain="\nRain: "+response.data.rain;
+                rain="\nRain: "+response.data.rain+rain;
             }
             return functionName+locationName+tempKelvin+tempCelsius+weather+rain;
-            // return response.data;
         } catch (error) {
             if(error.response.status == 404 && error.response.data.message=='city not found'){
                 console.error("Location value is invalid");
@@ -73,14 +72,13 @@ module.exports = {
             const tempKelvin="\nTemperature(kelvin): "+response.data.main.temp;
             const tempCelsius="\nTemperature(celsius): "+celsius;
             const weather="\nWeather: "+response.data.weather[0].description;
-            const rain="\n==================================================";
+            var rain="\n==================================================";
             if(response.data.rain=='undefined'||"[object Object]"){
             }
             else{
-                const rain="\nRain: "+response.data.rain;
+                rain="\nRain: "+response.data.rain+rain;
             }
             return functionName+locationName+tempKelvin+tempCelsius+weather+rain;
-            // return response.data;
         } catch (error) {
             if(error.response.status == 400 && error.response.data.message=='wrong latitude'){
                 console.error("Latitude value is invalid");
@@ -104,11 +102,11 @@ module.exports = {
             const tempKelvin="\nTemperature(kelvin): "+response.data.main.temp;
             const tempCelsius="\nTemperature(celsius): "+celsius;
             const weather="\nWeather: "+response.data.weather[0].description;
-            const rain="\n==================================================";
+            var rain="\n==================================================";
             if(response.data.rain=='undefined'||"[object Object]"){
             }
             else{
-                const rain="\nRain: "+response.data.rain;
+                rain="\nRain: "+response.data.rain+rain;
             }
             return functionName+locationName+tempKelvin+tempCelsius+weather+rain;
             // return response.data;
@@ -142,11 +140,9 @@ module.exports = {
                     rain="\nRain: "+response.data.list[i].rain;
                 }
                 final=final+dayNumber+functionName+locationName+tempKelvin+tempCelsius+weather+rain;
-                // const final= functionName+locationName+tempKelvin+tempCelsius+weather+rain;
             }
             const end="==================================================";
             return final+end;
-            // return response.data;
         } catch (error) {
             if(error.response.status == 404 && error.response.data.message=='city not found'){
                 console.error("Location value is invalid");

@@ -8,8 +8,9 @@ This function will output the name of the location according to the latitude and
 Take note for the parameters that **Latitude comes before Longitude**
 
 Input example:<br>
+```ruby
 getLocationByLatLon(1.290270,103.851959)
-
+```
 Output example: <br>
 Function: getLocationByLatLon<br>
 Location:  Singapore
