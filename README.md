@@ -11,10 +11,12 @@ Input example:<br>
 ```ruby
 getLocationByLatLon(1.290270,103.851959)
 ```
+
 Output example: <br>
+```ruby
 Function: getLocationByLatLon<br>
 Location:  Singapore
-
+```
 Error handling:
 If theres an issue with the inputted values(Latitude and Longitude), an console error message would appear displaying "Latitude or Longitude value is invalid".
 
@@ -22,13 +24,17 @@ If theres an issue with the inputted values(Latitude and Longitude), an console 
 This function will output the latitude and longitude of the location entered.
 
 Input example:<br>
+```ruby
 getLatLonByLocation(Singapore)
+```
 
 Output example:<br>
+```ruby
 Function: getLatLonByLocation<br>
 Location: Singapore<br>
 Latitude: 1.352083<br>
 Longitude: 103.819836
+```
 
 Error handling:
 If theres an issue with the inputted value(Location), an console message would appear displaying "Entered address can't be found".
@@ -37,14 +43,18 @@ If theres an issue with the inputted value(Location), an console message would a
 This function will output the current weather of a place based on the location name entered. Details of the weather that are shown are temperature in both kelvin and celsius, weather and rain if there is.
 
 Input example:<br>
+```ruby
 getCurrentWeather(Singapore)
+```
 
 Output example:<br>
+```ruby
 Function: getCurrentWeather<br>
 Location: Singapore<br>
 Temperature(kelvin): 299.64<br>
 Temperature(celsius): 26.49000000000001<br>
 Weather: scattered clouds
+```
 
 Error handling:
 If theres an issue with the inputted value(Location), an console message would appear displaying "Location value is invalid".
@@ -53,14 +63,18 @@ If theres an issue with the inputted value(Location), an console message would a
 This function will output the current weather of a place based on the latitude and longitude entered. Details of the weather that are shown are temperature in both kelvin and celsius, weather and rain if there is.
 
 Input example:<br>
+```ruby
 getWeatherByCoordinates(1.290270,103.851959)
+```
 
 Output example:<br>
+```ruby
 Function: fetchWeatherByCoordinate<br>
 Location: Singapore<br>
 Temperature(kelvin): 300.31<br>
 Temperature(celsius): 27.160000000000025<br>
 Weather: scattered clouds
+```
 
 Error handling:
 If theres an issue with the inputted value(Latitude), an console message would appear displaying "Latitude value is invalid". And if theres an issue with the inputted value(Longitude), an console message would appear displaying "Longitude value is invalid". 
@@ -71,14 +85,18 @@ This function will output the current weather of a place based on the zip and co
 Note that there are many restrictions with this function. The zip code and country code for a location has to be retrieved from **"Open Weather Map" sample data list** which can be found in the documentations. The file name in that webpage containing the **zip and country codes is "city.list.json.gz"**.
 
 Input example:<br>
+```ruby
 getWeatherByZipCode(90011,US)
+```
 
 Output example:<br>
+```ruby
 Function: fetchWeatherByZipcode<br>
 Location: Los Angeles<br>
 Temperature(kelvin): 288.94<br>
 Temperature(celsius): 15.79000000000002<br>
 Weather: overcast clouds
+```
 
 Error handling:
 If theres an issue with the inputted value(zipCode/countryCode), an console message would appear displaying "Zip or country code invalid".
@@ -89,10 +107,12 @@ This function will output the current weather and weather for the next few days 
 Note that by entering 3 for the days field, the function would output the current weather and the weather for the next 2 days only.
 
 Input example:<br>
+```ruby
 getForecast(Singapore,3)
+```
 
 Output example:
-
+```ruby
 Day: 0<br>
 Function: fetchForecast<br>
 Location: Singapore<br>
@@ -113,6 +133,7 @@ Location: Singapore<br>
 Temperature(kelvin): 300.15<br>
 Temperature(celsius): 26.870000000000005<br>
 Weather: light rain
+```
 
 Error handling:
 If theres an issue with the inputted value(Location), an console message would appear displaying "Location value is invalid". And if theres an issue with the inputted value(days), an console message would appear displaying "Days value: "+3<sup>This value changes according to the number entered by user. In this example, it is 3</sup>+" is not a number". 
@@ -121,12 +142,16 @@ If theres an issue with the inputted value(Location), an console message would a
 This function will output the current weather alert of a place based on the Location entered.
 
 Input example:<br>
+```ruby
 getWeatherAlerts(Singapore)
+```
 
+```ruby
 Output example:<br>
 Function: fetchWeatherAlerts<br>
 Location: Singapore<br>
 No Alerts
+```
 
 Error handling:
 If theres an issue with the inputted value(Location), an console message would appear displaying "Location value is invalid". 
@@ -135,12 +160,16 @@ If theres an issue with the inputted value(Location), an console message would a
 This function will output the UV Index of a location based on the Latitude and Longitude entered.
 
 Input example:<br>
+```ruby
 getWeatherUV(1.290270,103.851959)
+```
 
+```ruby
 Output example:<br>
 Function: fetchWeatherUVIndex<br>
 Location:  Singapore<br>
 UV Index: 13.57
+```
 
 Error handling:
 If theres an issue with the inputted value(Latitude), an console message would appear displaying "Latitude value is invalid". And if theres an issue with the inputted value(Longitude), an console message would appear displaying "Longitude value is invalid".
